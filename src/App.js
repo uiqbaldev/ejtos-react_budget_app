@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-icons/fa";
 
 import { AppProvider } from './context/AppContext';
 import Budget from './components/Budget';

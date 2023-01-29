@@ -4,11 +4,11 @@ import { AppContext } from '../context/AppContext';
 
 const Currency = (props) => {
   const [ currency,setCurrency ] = useState('');
-  const { dispatch, } = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
   
   const updateCurrency = (event) => {
-    /*console.log(currency+"....A..."+event.target.value);
-    */
+    console.log(currency+"....A..."+event.target.value);
+    
     dispatch({
           type: 'CHG_CURRENCY',
           payload: event.target.value,
@@ -22,8 +22,8 @@ const Currency = (props) => {
       <select 
         className='btn btn-success dropdown-toggle'
         id='currency'
+        name='currency'
         onChange={(event) =>updateCurrency(event)}>Currency ({currency})
-          <option defaultValue={currency}>Currency ({currency})</option>
           <option value='£'>£ Pound</option>
           <option value='$'>$ Dollar</option>
           <option value='€'>€ Euro</option>
